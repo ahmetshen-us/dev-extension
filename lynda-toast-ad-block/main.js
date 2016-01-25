@@ -35,6 +35,6 @@ catch(err)
   }
 
 // console.log('All ads have been removed.');
-setTimeout(function(){remove();},5000);
+setTimeout(function(){remove();},2000);
 }
 remove();
