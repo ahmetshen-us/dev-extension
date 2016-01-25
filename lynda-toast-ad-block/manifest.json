@@ -1,0 +1,14 @@
+{
+  "name": "Lynda Toast Ad Block",
+  "version": "0.0.1",
+  "description": "Disable side ads on Lynda",
+  "content_scripts": [
+    {
+        "matches": [
+        "http://*.lynda.com/*","https://*.lynda.com/*"],
+        "js": ["main.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }
+  ]
+}
