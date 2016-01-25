@@ -6,7 +6,7 @@
   "content_scripts": [
     {
         "matches": [
-        "http://*.lynda.com/*","https://*.lynda.com/*"],
+        "http://*.lynda.com/*","https://*.lynda.com/*","http://*.amazon.com/*","https://*.amazon.com/*"],
         "js": ["main.js"],
         "run_at": "document_end",
         "all_frames": true
