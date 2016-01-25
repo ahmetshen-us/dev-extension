@@ -1,37 +1,29 @@
+function getElementsStartsWithId( id ) {
+  var children = document.body.getElementsByTagName('*');
+  var elements = [], child;
+  for (var i = 0, length = children.length; i < length; i++) {
+    child = children[i];
+    if (child.id.substr(0, id.length) == id)
+      elements.push(child);
+  }
+  return elements;
+}
+
 function remove(){
-try
+// try
+//   {
+//     document.getElementById('pagelet_ego_pane_w').innerHTML = '';
+//   }
+  try
   {
-    document.getElementById('pagelet_ego_pane_w').innerHTML = '';
+    getElementsStartsWithId('dealply-toast').innerHTML = '';
   }
 catch(err)
   {
     //Skip if "pagelet_ego_pane_w" div tag isn't on this page
   }
-  try
-  {
-        document.getElementById('pagelet_ego_pane').innerHTML = '';
-  }
-catch(err)
-  {
-    //Skip if "pagelet_ego_pane" div tag isn't on this page
-  }
-    try
-  {
-        document.getElementById('pagelet_side_ads').innerHTML = '';
-  }
-catch(err)
-  {
-    //Skip if "pagelet_side_ads" div tag isn't on this page
-  }
-      try
-  {
-        document.getElementById('fbPhotoSnowliftAdsSide').innerHTML = '';
-  }
-catch(err)
-  {
-    //Skip if "fbPhotoSnowliftAdsSide" div tag isn't on this page
-  }
+
 console.log('All ads have been removed.');
-setTimeout(function(){remove();},2000);
+setTimeout(function(){remove();},1000);
 }
 remove();

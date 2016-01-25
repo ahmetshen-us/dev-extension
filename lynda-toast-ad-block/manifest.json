@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "name": "Lynda Toast Ad Block",
   "version": "0.0.1",
   "description": "Disable side ads on Lynda",
