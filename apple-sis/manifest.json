@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Apple SIS",
+  "version": "0.0.1",
+  "description": "Change with of gradeBar and assignmentBar",
+  "content_scripts": [
+    {
+        "matches": [
+        "http://*.pioneer.applesis.org/*","https://*.pioneer.applesis.org/*"],
+        "js": ["main.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }
+  ]
+}
