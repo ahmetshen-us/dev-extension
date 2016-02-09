@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Apple SIS",
+  "name": "SIS Grade Filler",
   "version": "0.0.1",
-  "description": "Change with of gradeBar and assignmentBar",
+  "description": "Fill in grades lazy way",
   "content_scripts": [
     {
         "matches": [
