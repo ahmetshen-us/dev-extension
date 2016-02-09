@@ -6,7 +6,9 @@ function myFunc(){
 
 var url = "https://www.codecademy.com/users/textBlaster76324/achievements";
 var searchTerm ={unit5p1:"More on Control Flow in JS",
-                unit5p2:"Choose Your Own Adventure 2"};
+                unit5p2:"Choose Your Own Adventure 2",
+                unit6p1:"Arrays and Objects in JS",
+                unit6p2:"Contact List"};
 var point = 0;
 // var searchTerm ="Arrays and Objects in JS";
 $(function(){
@@ -25,6 +27,9 @@ $(function(){
       console.log(point);
     });
 });
+
+
+
 
 
 
