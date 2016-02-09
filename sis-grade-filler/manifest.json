@@ -7,9 +7,10 @@
     {
         "matches": [
         "http://*.pioneer.applesis.org/*","https://*.pioneer.applesis.org/*"],
-        "js": ["main.js"],
+        "js": ["jquery-2.2.0.min.js","main.js"],
         "run_at": "document_end",
         "all_frames": true
+        
     }
   ]
 }
