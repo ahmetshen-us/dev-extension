@@ -1,3 +1,4 @@
+var $ = require('jQuery');
 // window.onload = 
 function myFunc() {
 
@@ -133,5 +134,6 @@ $(function() {
     }
 
 }
-document.onload = myFunc();
+// document.onload = myFunc();
+myFunc();
 // setTimeout(myFunc, 500);
