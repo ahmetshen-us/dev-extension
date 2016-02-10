@@ -27,12 +27,13 @@ var nameUrl = {
 
 };
 
-
 var searchTerm = {
 //     unit5p1: "More on Control Flow in JS",
 //     unit5p2: "Choose Your Own Adventure 2",
-    unit6p1: "Arrays and Objects in JS",
-    unit6p2: "Contact List"
+//     unit6p1: "Arrays and Objects in JS",
+//     unit6p2: "Contact List",
+   unit7p1: "Introduction to Objects I",
+   unit7p2: "Building an Address Book"
 };
 var point = 0;
 
@@ -75,6 +76,7 @@ $(function() {
     }
   console.clear();
 });
+
 
 
 
