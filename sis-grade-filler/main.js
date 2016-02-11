@@ -139,12 +139,22 @@ function myFunc2() {
     // alert("in func");
     var column = prompt("Please enter column number", "1");
     var i = 0;
-    // alert(column);
-    $('#gradesTable td:nth-child('+column+')').each(function() {
+    alert(column);
+    $('#gradesTable td:nth-child(' + column + ')').each(function() {
+        //$('#foo td:has(:input)').each(function() {
         //$(this).css('background-color', '#bbb');
         // alert($(this).text());
-        $(this).text(i++);
+        //alert($(this).html());
+        var value = $(this).find(":input").val();
+        alert(value);
+        $(this).find(":input").val("10");
+
+        //$(this).text("$$$");
+
     });
+
+
+
 }
 
 // document.onload = myFunc();
