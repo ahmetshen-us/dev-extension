@@ -153,6 +153,10 @@ function myFunc2() {
 
     });
 
+    // $("#foo").children("tbody").children("tr").children("td:nth-child(3)").each(function() {
+    //     //alert("Third Column Value: " + $(this).html());
+    // });
+
 
 
 }
