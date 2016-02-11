@@ -139,19 +139,21 @@ function myFunc2() {
     // alert("in func");
     var column = prompt("Please enter column number", "1");
     var i = 0;
-    alert(column);
+    // alert(column);
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
         //$('#foo td:has(:input)').each(function() {
         //$(this).css('background-color', '#bbb');
         // alert($(this).text());
         //alert($(this).html());
         var value = $(this).find(":input").val();
-        alert(value);
-        $(this).find(":input").val("10");
-
+        // alert(value);
+        $(this).find(":input").val("");
+document.getElementById("bSave").click(); 
         //$(this).text("$$$");
 
+
     });
+
 
     // $("#foo").children("tbody").children("tr").children("td:nth-child(3)").each(function() {
     //     //alert("Third Column Value: " + $(this).html());
@@ -160,8 +162,12 @@ function myFunc2() {
 
 
 }
-
+ key('⌘+r, ctrl+r', function(){ 
+    // alert('you pressed a!');
+    myFunc2();
+    return false 
+});
 // document.onload = myFunc();
-document.onload = myFunc2();
+// document.onload = myFunc2();
 // myFunc();
 // setTimeout(myFunc, 500);
