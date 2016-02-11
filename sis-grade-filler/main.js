@@ -201,7 +201,7 @@ function myFunc() {
 
 
     } catch (err) {
-console.log("hey");
+        console.log("hey");
     }
 
 }
@@ -256,7 +256,7 @@ key('⌘+r, ctrl+r', function() {
 
 
     // namePoint.sort(function(a, b) {
-    
+
 
     //     a=a.toString().split(" ")[1];
     //     b=b.toString().split(" ")[1];
