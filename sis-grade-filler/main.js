@@ -48,8 +48,7 @@ var p5 = {
     "Enver Yeniyurt": "https://www.codecademy.com/users/tagCoder73722/achievements",
     "Yusuf Celik": "https://www.codecademy.com/users/microSurfer10716/achievements"
 };
-var nameUrl = eval(prompt("Class?", "p4"));
-console.log(nameUrl);
+
 
 var unit5 = {
     unit5p1: "More on Control Flow in JS",
@@ -73,18 +72,21 @@ var unit8 = {
     unit8p2: "Building a Cash Register"
 };
 
-var unit = prompt("Please enter  unit", "unit5");
-var searchTerm = eval(unit);
-// console.log(unit.slice(-1)-4);
 
 
-// var searchTerm = unit5;
 
 var point = 0;
+var unit;
 
 function myFunc() {
 
     try {
+        var nameUrl = eval(prompt("Class?", "p4"));
+// console.log(nameUrl);
+ unit = prompt("Please enter  unit", "unit5");
+var searchTerm = eval(unit);
+// console.log(unit.slice(-1)-4);
+
         Object.size = function(obj) {
             var size = 0,
                 key;
@@ -197,16 +199,17 @@ function myFunc2(p) {
         
         $(this).find(":input").val(p[i++]);
 
-        var save = prompt("Save?", "Yes");
-        if (save === "Yes") {
-            document.getElementById("bSave").click();
-        }
+
 
 
 
 
     });
 
+        // var save = prompt("Save?", "Yes");
+        // if (save === "Yes") {
+            document.getElementById("bSave").click();
+        // }
 
 
 
