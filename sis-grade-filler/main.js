@@ -127,6 +127,7 @@ function myFunc() {
             $.ajax({
                 url: theUrl,
                 dataType: "text",
+                // TODO: Make it faster and in order with async :true
                 async: false,
                 success: function(data) {
                     point = 0;
