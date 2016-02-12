@@ -1,29 +1,26 @@
-var p4 = {
+var nameUrl = {
     //   P4
     //   ==============================================================================
-    "Dogukan Aciker": "https://www.codecademy.com/users/webJumper62951/achievements",
-    "Furkan Aldemir": "https://www.codecademy.com/users/furkan28aldemir/achievements",
-    "Ihsan Alkin": "https://www.codecademy.com/users/IhsanAlkin/achievements",
-    "Burak Bilgen": "https://www.codecademy.com/users/BurakBilgen/achievements",
-    "Yunus Celik": "https://www.codecademy.com/users/chipSolver75435/achievements",
-    "Abdulkerim Eygoren": "https://www.codecademy.com/users/systemPro77748/achievements",
-    "Omer Gece": "https://www.codecademy.com/users/omergece/achievements",
-    "Sajidur Kader": "https://www.codecademy.com/users/teraBlaster90154/achievements",
-    "Cankutay Katkat": "https://www.codecademy.com/users/arcAce82707/achievements",
-    "Selim Kopuz": "https://www.codecademy.com/users/SelimKopuz/achievements",
-    "Yavuz Korkmaz": "https://www.codecademy.com/users/courseJumper57960/achievements",
-    "Tashku Mishto": "https://www.codecademy.com/users/textRunner98433/achievements",
-    "Taha Nas": "https://www.codecademy.com/users/dataRockstar16388/achievements",
-    "Bugrahan Ozkaya": "https://www.codecademy.com/users/coreMaster38580/achievements",
-    "Ahmet Pamukcuoglu": "https://www.codecademy.com/users/javaSurfer71293/achievements",
-    "Dogukan Sahin": "https://www.codecademy.com/users/bitPro93681/achievements",
-    "Toprak Unsal": "https://www.codecademy.com/users/webRunner73460/achievements",
-    "Abdulkadir Talha Yilmaz": "https://www.codecademy.com/users/talhayilmaz/achievements",
-    "Isa Yolbarsov": "https://www.codecademy.com/users/Iyolbarsov/achievements"
-        //   ==============================================================================
-}
-var p5 = {
-
+    // "Dogukan Aciker": "https://www.codecademy.com/users/webJumper62951/achievements",
+    // "Furkan Aldemir": "https://www.codecademy.com/users/furkan28aldemir/achievements",
+    // "Ihsan Alkin": "https://www.codecademy.com/users/IhsanAlkin/achievements",
+    // "Burak Bilgen": "https://www.codecademy.com/users/BurakBilgen/achievements",
+    // "Yunus Celik": "https://www.codecademy.com/users/chipSolver75435/achievements",
+    // "Abdulkerim Eygoren": "https://www.codecademy.com/users/systemPro77748/achievements",
+    // "Omer Gece": "https://www.codecademy.com/users/omergece/achievements",
+    // "Sajidur Kader": "https://www.codecademy.com/users/teraBlaster90154/achievements",
+    // "Cankutay Katkat": "https://www.codecademy.com/users/arcAce82707/achievements",
+    // "Selim Kopuz": "https://www.codecademy.com/users/SelimKopuz/achievements",
+    // "Yavuz Korkmaz": "https://www.codecademy.com/users/courseJumper57960/achievements",
+    // "Tashku Mishto": "https://www.codecademy.com/users/textRunner98433/achievements",
+    // "Taha Nas": "https://www.codecademy.com/users/dataRockstar16388/achievements",
+    // "Bugrahan Ozkaya": "https://www.codecademy.com/users/coreMaster38580/achievements",
+    // "Ahmet Pamukcuoglu": "https://www.codecademy.com/users/javaSurfer71293/achievements",
+    // "Dogukan Sahin": "https://www.codecademy.com/users/bitPro93681/achievements",
+    // "Toprak Unsal": "https://www.codecademy.com/users/webRunner73460/achievements",
+    // "Abdulkadir Talha Yilmaz": "https://www.codecademy.com/users/talhayilmaz/achievements",
+    // "Isa Yolbarsov": "https://www.codecademy.com/users/Iyolbarsov/achievements"
+    //   ==============================================================================
     //   P5
     //   ==============================================================================
     "Ahmet Akarsu": "https://www.codecademy.com/users/methodAce46548/achievements",
@@ -48,37 +45,16 @@ var p5 = {
     "Enver Yeniyurt": "https://www.codecademy.com/users/tagCoder73722/achievements",
     "Yusuf Celik": "https://www.codecademy.com/users/microSurfer10716/achievements"
 };
-var nameUrl = eval(prompt("Class?", "p4"));
-console.log(nameUrl);
-
-var unit5 = {
+var searchTerm = {
     unit5p1: "More on Control Flow in JS",
     unit5p2: "Choose Your Own Adventure 2"
-
+        // unit6p1: "Arrays and Objects in JS",
+        // unit6p2: "Contact List"
+        // unit7p1: "Introduction to Objects I",
+        // unit7p2: "Building an Address Book"  
+        // unit8p1: "Introduction to Objects II",
+        // unit8p2: "Building a Cash Register"
 };
-var unit6 = {
-
-    unit6p1: "Arrays and Objects in JS",
-    unit6p2: "Contact List"
-
-};
-var unit7 = {
-
-    unit7p1: "Introduction to Objects I",
-    unit7p2: "Building an Address Book"
-
-};
-var unit8 = {
-    unit8p1: "Introduction to Objects II",
-    unit8p2: "Building a Cash Register"
-};
-
-var unit = prompt("Please enter  unit", "unit5");
-var searchTerm = eval(unit);
-// console.log(unit.slice(-1)-4);
-
-
-// var searchTerm = unit5;
 
 var point = 0;
 
@@ -94,11 +70,13 @@ function myFunc() {
             return size;
         };
 
-
+        // Get the size of an object
         var size = Object.size(nameUrl);
 
         var fruits = [];
 
+        // $(function() {
+        // var keys = Object.keys(nameUrl).sort();
         var keys = Object.keys(nameUrl).sort(function(a, b) {
 
 
@@ -110,18 +88,45 @@ function myFunc() {
             if (a > b) return 1;
             return 0;
         });
-
+        // console.log(keys);
         for (var i = 0; i < keys.length; i++) {
-
+            // console.log(keys[i]);
+            // console.log(callme(nameUrl[keys[i]], keys[i]));
             callme(nameUrl[keys[i]], keys[i])
 
         }
 
+        // for (var name in nameUrl) {
+
+        //     callme(nameUrl[name], name);
+
+        // }
 
         function callme(theUrl, newName) {
 
+            // $.get(theUrl, function(data, status) {
 
 
+            //    point=0;
+            //     for (var key in searchTerm) {
+
+
+
+            //         if (data.indexOf(searchTerm[key]) != -1) {
+
+            //             point += 50;
+
+            //         }
+
+
+            //     }
+
+
+            //     // return point;
+
+            //     console.log(newName + " = " + point);
+
+            // });
             $.ajax({
                 url: theUrl,
                 dataType: "text",
@@ -133,36 +138,49 @@ function myFunc() {
 
 
                         if (data.indexOf(searchTerm[key]) != -1) {
-
+                            // console.log(data);
                             point += 50;
 
 
                         }
 
 
-                        console.log(newName + " => " + searchTerm[key]);
-                        console.log(newName + " => " + point);
+
 
                     }
-                    // TODO: Remove Comment
                     ajaxCallBack(point);
                 }
 
             });
-
+            // console.log(newName + " = " + point);
 
 
         }
 
         function ajaxCallBack(p) {
-
+            // console.log(p);
             fruits.push(p);
-            if (fruits.length == size) {
 
+            // console.log(size);
+            if (fruits.length == size) {
+                // for (var i = 0; i < fruits.length; i++) {
+                //     console.log(fruits[i]);
+                // }
                 myFunc2(fruits);
             }
+            // console.log(fruits);
 
+            // console.log(p);
         }
+
+
+
+
+
+
+
+
+        // });
 
 
 
@@ -180,10 +198,7 @@ function myFunc() {
 
 function myFunc2(p) {
 
-    // var column = prompt("Please enter column number", "1");
-    var column = unit.slice(-1) - 4;
-    console.log(column);
-
+    var column = prompt("Please enter column number", "1");
     var i = 0;
 
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
