@@ -1,9 +1,3 @@
-// var $ = require('jQuery');
-// window.onload = 
-// var namePoint = {};
-// var namePoint = [];
-
-
 var nameUrl = {
     //   P4
     //   ==============================================================================
@@ -51,58 +45,57 @@ var nameUrl = {
     "Enver Yeniyurt": "https://www.codecademy.com/users/tagCoder73722/achievements",
     "Yusuf Celik": "https://www.codecademy.com/users/microSurfer10716/achievements"
 };
-        var searchTerm = {
-            //     unit5p1: "More on Control Flow in JS",
-            //     unit5p2: "Choose Your Own Adventure 2"
-            //     unit6p1: "Arrays and Objects in JS",
-            //     unit6p2: "Contact List"
-            unit7p1: "Introduction to Objects I",
-            unit7p2: "Building an Address Book"
-        };
-         for (var name in nameUrl) {
-                console.log(name);
+var searchTerm = {
+    //     unit5p1: "More on Control Flow in JS",
+    //     unit5p2: "Choose Your Own Adventure 2"
+    //     unit6p1: "Arrays and Objects in JS",
+    //     unit6p2: "Contact List"
+    unit7p1: "Introduction to Objects I",
+    unit7p2: "Building an Address Book"
+};
 
-            }
 
 function myFunc() {
 
     try {
-        // ===============================================
-
-        // var namePoint = {};
-
-
-
-
-        // var myAssociativeArr = [];
-
- // for (var name in nameUrl) {
- //                console.log(name);
-
- //            }
-
 
         $(function() {
+            // var keys = Object.keys(nameUrl).sort();
+    var keys = Object.keys(nameUrl).sort(function(a, b) {
+
+
+        a=a.toString().split(" ")[1];
+
+        b=b.toString().split(" ")[1];
+
+        if (a < b) return -1;
+        if (a > b) return 1;
+        return 0;
+    });
+            // console.log(keys);
+//             for (var i = 0; i < keys.length; i++) {
+//     console.log(keys[i]);
+
+// }
 
             for (var name in nameUrl) {
-                // console.log(name);
 
                 callme(nameUrl[name], name);
 
             }
 
             function callme(theUrl, newName) {
-                // var jqxhr = $.get(theUrl, function(data, status) {
-            $.get(theUrl, function(data, status) {
-                    // console.log("Data: " + data + "\nStatus: " + status);
+
+                $.get(theUrl, function(data, status) {
+
 
                     var point = 0;
                     for (var key in searchTerm) {
-                        //   console.log("key " + key + " has value " + myArray[key]);
+
 
 
                         if (data.indexOf(searchTerm[key]) != -1) {
-                                                // console.log(key + " is finished");
+
                             point += 50;
 
                         }
@@ -110,184 +103,63 @@ function myFunc() {
 
                     }
 
-    console.log(newName +" = "+point);
-                    // namePoint.name = newName;
-                    // namePoint.point = point;
-                    // namePoint.push({
-                    //     name: newName,
-                    //     point: point
-                    // });
+                    console.log(newName + " = " + point);
 
 
 
-                    // console.log(nameUrl[newName]);
-                    // console.log(nameUrl);
-
-
-
-                    // console.log("in .get "+namePoint.name + " => " + namePoint.point);
-
-
-
-                    // alert(namePoint.name + " => " + namePoint.point);
-
-
-
-                    //             var newElement = {};
-                    //             newElement.name = newName;
-                    //             newElement.point = point;
-                    //             myAssociativeArr.push(newElement);
-                    //             console.log(myAssociativeArr);
-
-                    //           Sort array by firstname (alphabetically) in Javascript
-                    //           myAssociativeArr.sort(function(a, b){
-                    //     if(a.name < b.name) return -1;
-                    //     if(a.name > b.name) return 1;
-                    //     return 0;
-                    // });
 
 
 
 
                 });
 
-                //       $.get( "theUrl", function( data ) {
-                // //   $( ".result" ).html( data );
-                //   alert( "Load was performed." );
-                // });
 
-                //       $.ajax({
-                //   url: "http://fiddle.jshell.net/favicon.png",
-                //   beforeSend: function( xhr ) {
-                //     xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
-                //   }
-                // })
-                //   .done(function( data ) {
-                //     if ( console && console.log ) {
-                //       alert( "Sample of data:", data.slice( 0, 100 ) );
-                //     }
-                //   });
-
-
-                //        namePoint.newName=point;
             }
 
 
 
-            // console.clear();
-
-
-            // console.log("in .function "+namePoint.name + " => " + namePoint.point);
 
 
 
 
         });
 
-        // console.log("in .try "+namePoint);
 
 
 
 
-
-
-
-        // ===============================================
-
-        /*
-        var response = '';
-        $.ajax({ type: "GET",   
-                 url:"https://www.codecademy.com/users/webJumper62951/achievements",   
-                 async: false,
-                 success : function(text)
-                 {
-                     response = text;
-                 }
-        });
-        console.log(response.indexOf("More on Control Flow in JS")!=-1);
-        */
 
 
 
 
     } catch (err) {
-        // console.log("err "+err);
+        console.log("err " + err);
     }
 
 }
 
 function myFunc2() {
-    // alert("in func");
+
     var column = prompt("Please enter column number", "1");
     var i = 0;
-    // alert(column);
+
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
-        //$('#foo td:has(:input)').each(function() {
-        //$(this).css('background-color', '#bbb');
-        // alert($(this).text());
-        //alert($(this).html());
+
         var value = $(this).find(":input").val();
-        // alert(value);
+
         $(this).find(":input").val("");
         document.getElementById("bSave").click();
-        //$(this).text("$$$");
+
 
 
     });
 
 
-    // $("#foo").children("tbody").children("tr").children("td:nth-child(3)").each(function() {
-    //     //alert("Third Column Value: " + $(this).html());
-    // });
-
 
 
 }
 key('⌘+r, ctrl+r', function() {
-    // alert('you pressed a!');
-    // myFunc2();
-    // console.log(namePoint);
 
-    // if(Object.keys(namePoint).length==0){
     myFunc();
 
-    // Object.size = function(obj) {
-    //     var size = 0,
-    //         key;
-    //     for (key in obj) {
-    //         if (obj.hasOwnProperty(key)) size++;
-    //     }
-    //     return size;
-    // };
-
-    // Get the size of an object
-    // var size = Object.size(namePoint);
-    // console.log(size)
-
-
-    // namePoint.sort(function(a, b) {
-
-
-    //     a=a.toString().split(" ")[1];
-    //     b=b.toString().split(" ")[1];
-
-    //     if (a.name < b.name) return -1;
-    //     if (a.name > b.name) return 1;
-    //     return 0;
-    // });
-
-    // console.log(Object.keys(namePoint).length == 0);
-
-    // for (var key in namePoint) {
-    //     console.log(namePoint[key].name + " => " + namePoint[key].point);
-    // }
-
-    // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$");
-
-    // console.log(namePoint["Ahmet Akarsu"]);
-    // return false;
 });
-// document.onload = myFunc();
-// document.onload = myFunc2();
-// myFunc();
-// setTimeout(myFunc, 500);
