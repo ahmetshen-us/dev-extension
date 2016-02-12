@@ -82,10 +82,10 @@ function myFunc() {
 
     try {
         var nameUrl = eval(prompt("Class?", "p4"));
-// console.log(nameUrl);
- unit = prompt("Please enter  unit", "unit5");
-var searchTerm = eval(unit);
-// console.log(unit.slice(-1)-4);
+        // console.log(nameUrl);
+        unit = prompt("Please enter  unit", "unit5");
+        var searchTerm = eval(unit);
+        // console.log(unit.slice(-1)-4);
 
         Object.size = function(obj) {
             var size = 0,
@@ -99,7 +99,7 @@ var searchTerm = eval(unit);
 
         var size = Object.size(nameUrl);
 
-        var fruits = [];
+        var grades = [];
 
         var keys = Object.keys(nameUrl).sort(function(a, b) {
 
@@ -158,10 +158,10 @@ var searchTerm = eval(unit);
 
         function ajaxCallBack(p) {
 
-            fruits.push(p);
-            if (fruits.length == size) {
+            grades.push(p);
+            if (grades.length == size) {
 
-                myFunc2(fruits);
+                myFunc2(grades);
             }
 
         }
@@ -180,11 +180,11 @@ var searchTerm = eval(unit);
 
 }
 
-function myFunc2(p) {
+function myFunc2(gr) {
 
     // var column = prompt("Please enter column number", "1");
     var column = unit.slice(-1) - 4;
-    console.log(column);
+    // console.log(column);
 
     var i = 0;
 
@@ -196,8 +196,8 @@ function myFunc2(p) {
         // } else if (value == 50 && p[i] == 100) {
         //     $(this).find(":input").val(p[i++] - 5);
         // }
-        
-        $(this).find(":input").val(p[i++]);
+
+        $(this).find(":input").val(gr[i++]);
 
 
 
@@ -206,10 +206,10 @@ function myFunc2(p) {
 
     });
 
-        // var save = prompt("Save?", "Yes");
-        // if (save === "Yes") {
-            document.getElementById("bSave").click();
-        // }
+    // var save = prompt("Save?", "Yes");
+    // if (save === "Yes") {
+    document.getElementById("bSave").click();
+    // }
 
 
 
