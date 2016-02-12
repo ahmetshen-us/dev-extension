@@ -188,13 +188,20 @@ function myFunc2(p) {
 
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
 
-        var value = $(this).find(":input").val();
-        if (value == 0) {
-            $(this).find(":input").val(p[i++] - 10);
-        } else if (value == 50 && p[i] == 100) {
-            $(this).find(":input").val(p[i++] - 5);
+        // var value = $(this).find(":input").val();
+        // if (value == 0) {
+        //     $(this).find(":input").val(p[i++] - 10);
+        // } else if (value == 50 && p[i] == 100) {
+        //     $(this).find(":input").val(p[i++] - 5);
+        // }
+        
+        $(this).find(":input").val(p[i++]);
+
+        var save = prompt("Save?", "Yes");
+        if (save === "Yes") {
+            document.getElementById("bSave").click();
         }
-        document.getElementById("bSave").click();
+
 
 
 
