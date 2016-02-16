@@ -112,6 +112,19 @@ function myFunc() {
             if (a > b) return 1;
             return 0;
         });
+// TODO: Try to implement with async and in order
+// console.log("p5.length => "+p5.length);
+
+//         for (var i = 0; i <= p5.length; i++) {
+//             for (key in p5[i]) {
+
+//                 // if (info.links[i].hasOwnProperty(key)) {
+                   
+//                 // } // hasOwnProperty check
+//             } // for each object
+//         } //for each array element
+
+
 
         for (var i = 0; i < keys.length; i++) {
 
