@@ -93,6 +93,7 @@ var unit3 = {
 
 var point = 0;
 var unit;
+var column;
 
 function myFunc() {
 
@@ -100,8 +101,20 @@ function myFunc() {
         var nameUrl = eval(prompt("Class?", "p4"));
         // console.log(nameUrl);
         unit = prompt("Please enter  unit", "unit5");
+        // console.log(unit);
         var searchTerm = eval(unit);
+        // console.log(searchTerm);
         // console.log(unit.slice(-1)-4);
+
+        // unit = unit.slice(-1);
+        // console.log(typeof unit);
+        // console.log(unit);
+        // console.log(unit+4);
+        // console.log(parseInt(unit)+4);
+
+
+        // console.log(unit.slice(-1) + 4);
+        // column = prompt("Please enter column number", "1");
 
         Object.size = function(obj) {
             var size = 0,
@@ -128,17 +141,17 @@ function myFunc() {
             if (a > b) return 1;
             return 0;
         });
-// TODO: Try to implement with async and in order
-// console.log("p5.length => "+p5.length);
+        // TODO: Try to implement with async and in order
+        // console.log("p5.length => "+p5.length);
 
-//         for (var i = 0; i <= p5.length; i++) {
-//             for (key in p5[i]) {
+        //         for (var i = 0; i <= p5.length; i++) {
+        //             for (key in p5[i]) {
 
-//                 // if (info.links[i].hasOwnProperty(key)) {
-                   
-//                 // } // hasOwnProperty check
-//             } // for each object
-//         } //for each array element
+        //                 // if (info.links[i].hasOwnProperty(key)) {
+
+        //                 // } // hasOwnProperty check
+        //             } // for each object
+        //         } //for each array element
 
 
 
@@ -172,8 +185,8 @@ function myFunc() {
                         }
 
 
-                        console.log(newName + " => " + searchTerm[key]);
-                        console.log(newName + " => " + point);
+                        // console.log(newName + " => " + searchTerm[key]);
+                        // console.log(newName + " => " + point);
 
                     }
                     // TODO: Remove Comment
@@ -213,7 +226,9 @@ function myFunc() {
 function myFunc2(gr) {
 
     // var column = prompt("Please enter column number", "1");
-    var column = unit.slice(-1) - 4;
+    // var column = unit.slice(-1) - 4;
+    var column = parseInt(unit.slice(-1)) + 4;
+
     // console.log(column);
 
     var i = 0;
@@ -238,7 +253,8 @@ function myFunc2(gr) {
 
     // var save = prompt("Save?", "Yes");
     // if (save === "Yes") {
-    document.getElementById("bSave").click();
+
+    // document.getElementById("bSave").click();
     // }
 
 
