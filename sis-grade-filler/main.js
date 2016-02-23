@@ -49,30 +49,46 @@ var p5 = {
     "Yusuf Celik": "https://www.codecademy.com/users/microSurfer10716/achievements"
 };
 
+// JavaScript
+// var unit5 = {
+//     unit5p1: "More on Control Flow in JS",
+//     unit5p2: "Choose Your Own Adventure 2"
 
-var unit5 = {
-    unit5p1: "More on Control Flow in JS",
-    unit5p2: "Choose Your Own Adventure 2"
+// };
+// var unit6 = {
 
+//     unit6p1: "Arrays and Objects in JS",
+//     unit6p2: "Contact List"
+
+// };
+// var unit7 = {
+
+//     unit7p1: "Introduction to Objects I",
+//     unit7p2: "Building an Address Book"
+
+// };
+// var unit8 = {
+//     unit8p1: "Introduction to Objects II",
+//     unit8p2: "Building a Cash Register"
+// };
+
+// HTML CSS
+var unit1 = {
+    unit1p1: "HTML Basics",
+    unit1p2: "Build Your Own Webpage"
 };
-var unit6 = {
-
-    unit6p1: "Arrays and Objects in JS",
-    unit6p2: "Contact List"
-
+var unit2 = {
+    unit2p1: "HTML Basics II",
+    unit2p2: "Social Networking Profile"
 };
-var unit7 = {
-
-    unit7p1: "Introduction to Objects I",
-    unit7p2: "Building an Address Book"
-
+var unit3 = {
+    unit3p1: "HTML Basics III",
+    unit3p2: "Clickable Photo Page"
 };
-var unit8 = {
-    unit8p1: "Introduction to Objects II",
-    unit8p2: "Building a Cash Register"
-};
-
-
+// var unit4 = {
+//     unit4p1: "HTML Basics III",
+//     unit4p2: "Clickable Photo Page"
+// };
 
 
 var point = 0;
