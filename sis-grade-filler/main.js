@@ -132,15 +132,20 @@ function myFunc() {
 
         var keys = Object.keys(nameUrl).sort(function(a, b) {
 
+            // TODO: Fix Sorting
+            a = a.toString().split(" ");
+            a = a[a.length];
 
-            a = a.toString().split(" ")[1];
+            
 
-            b = b.toString().split(" ")[1];
+            b = b.toString().split(" ");
+            b=b[b.length];
 
             if (a < b) return -1;
             if (a > b) return 1;
             return 0;
         });
+        console.log(keys);
         // TODO: Try to implement with async and in order
         // console.log("p5.length => "+p5.length);
 
@@ -205,6 +210,7 @@ function myFunc() {
             if (grades.length == size) {
 
                 myFunc2(grades);
+                // console.log(grades);
             }
 
         }
@@ -241,6 +247,7 @@ function myFunc2(gr) {
         // } else if (value == 50 && p[i] == 100) {
         //     $(this).find(":input").val(p[i++] - 5);
         // }
+        // console.log(gr[i]);
 
         $(this).find(":input").val(gr[i++]);
 
