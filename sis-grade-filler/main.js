@@ -85,10 +85,10 @@ var unit3 = {
     unit3p1: "HTML Basics III",
     unit3p2: "Clickable Photo Page"
 };
-// var unit4 = {
-//     unit4p1: "HTML Basics III",
-//     unit4p2: "Clickable Photo Page"
-// };
+var unit4 = {
+    unit4p1: "CSS: An Overview",
+    unit4p2: "Design a Button for Your Website"
+};
 
 
 var point = 0;
@@ -185,8 +185,8 @@ function myFunc() {
                         }
 
 
-                        // console.log(newName + " => " + searchTerm[key]);
-                        // console.log(newName + " => " + point);
+                        console.log(newName + " => " + searchTerm[key]);
+                        console.log(newName + " => " + point);
 
                     }
                     // TODO: Remove Comment
