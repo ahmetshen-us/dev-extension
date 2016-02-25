@@ -125,27 +125,29 @@ function myFunc() {
             return size;
         };
 
-
+        // console.log("Dogukan Aciker".split(" ")[1]);
+        // console.log("Abdulkadir Talha Yilmaz".split("")[1]);
         var size = Object.size(nameUrl);
 
         var grades = [];
 
         var keys = Object.keys(nameUrl).sort(function(a, b) {
 
-            // TODO: Fix Sorting
-            a = a.toString().split(" ");
-            a = a[a.length];
 
-            
+            a = a.toString().split(" ");
+            a = a[a.length - 1];
+            // console.log(a);
+
+
 
             b = b.toString().split(" ");
-            b=b[b.length];
-
+            b = b[b.length - 1];
+            // console.log(b);
             if (a < b) return -1;
             if (a > b) return 1;
             return 0;
         });
-        console.log(keys);
+        // console.log(keys);
         // TODO: Try to implement with async and in order
         // console.log("p5.length => "+p5.length);
 
@@ -190,8 +192,8 @@ function myFunc() {
                         }
 
 
-                        console.log(newName + " => " + searchTerm[key]);
-                        console.log(newName + " => " + point);
+                        // console.log(newName + " => " + searchTerm[key]);
+                        // console.log(newName + " => " + point);
 
                     }
                     // TODO: Remove Comment
