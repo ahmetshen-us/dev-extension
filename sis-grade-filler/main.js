@@ -242,16 +242,17 @@ function myFunc2(gr) {
     var i = 0;
 
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
-
-        // var value = $(this).find(":input").val();
-        // if (value == 0) {
-        //     $(this).find(":input").val(p[i++] - 10);
-        // } else if (value == 50 && p[i] == 100) {
-        //     $(this).find(":input").val(p[i++] - 5);
+// TODO: fix this late done assignments
+        // var curValue = $(this).find(":input").val();
+        // console.log(curValue);
+        // if (curValue == 0 &&gr[i]>0) {
+        //     $(this).find(":input").val(gr[i++]-10);
+        // } else{
+            $(this).find(":input").val(gr[i++]);
         // }
-        // console.log(gr[i]);
+    
 
-        $(this).find(":input").val(gr[i++]);
+        
 
 
 
