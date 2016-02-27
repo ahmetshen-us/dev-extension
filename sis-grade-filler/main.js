@@ -89,7 +89,8 @@ var unit4 = {
     unit4p1: "CSS: An Overview",
     unit4p2: "Design a Button for Your Website"
 };
-
+// var results = [];
+var results = {};
 
 var point = 0;
 var unit;
@@ -101,9 +102,9 @@ function myFunc() {
         var nameUrl = eval(prompt("Class?", "p4"));
         // console.log(nameUrl);
         unit = prompt("Please enter  unit", "unit5");
-        console.log(unit);
+        // console.log(unit);
         var searchTerm = eval(unit);
-        console.log(searchTerm);
+        // console.log(searchTerm);
         // console.log(unit.slice(-1)-4);
 
         // unit = unit.slice(-1);
@@ -169,6 +170,8 @@ function myFunc() {
         }
 
 
+
+
         function callme(theUrl, newName) {
 
 
@@ -176,13 +179,11 @@ function myFunc() {
             $.ajax({
                 url: theUrl,
                 dataType: "text",
-                // TODO: Make it faster and in order with async :true
-                async: false,
+
+                async: true,
                 success: function(data) {
                     point = 0;
                     for (var key in searchTerm) {
-
-
 
                         if (data.indexOf(searchTerm[key]) != -1) {
 
@@ -192,10 +193,14 @@ function myFunc() {
                         }
 
 
-                        // console.log(newName + " => " + searchTerm[key]);
-                        // console.log(newName + " => " + point);
+                        console.log(newName + " => " + searchTerm[key]);
+                        console.log(newName + " => " + point);
+                        results[newName] = point;
+                        // results.push({name:newName,point:point});
+                        // results.push({newName,point});
 
                     }
+                    // console.log(results);
                     // TODO: Remove Comment
                     ajaxCallBack(point);
                 }
@@ -211,8 +216,39 @@ function myFunc() {
             grades.push(p);
             if (grades.length == size) {
 
+                // for (var key in results) {
+                //     var value = results[key];
+                //     console.log(key + " ===> " + value);
+
+
+                // }
+                // console.log(results);
+
+                var keys = Object.keys(results).sort(function(a, b) {
+
+
+                    a = a.toString().split(" ");
+                    a = a[a.length - 1];
+                    // console.log(a);
+
+
+
+                    b = b.toString().split(" ");
+                    b = b[b.length - 1];
+                    // console.log(b);
+                    if (a < b) return -1;
+                    if (a > b) return 1;
+                    return 0;
+                });
+
+
+                console.log(keys);
+
+                // console.log(results);
+
                 myFunc2(grades);
                 // console.log(grades);
+                // console.log(grades.length);
             }
 
         }
@@ -242,17 +278,17 @@ function myFunc2(gr) {
     var i = 0;
 
     $('#gradesTable td:nth-child(' + column + ')').each(function() {
-// TODO: fix this late done assignments
+        // TODO: fix this late done assignments
         // var curValue = $(this).find(":input").val();
         // console.log(curValue);
         // if (curValue == 0 &&gr[i]>0) {
         //     $(this).find(":input").val(gr[i++]-10);
         // } else{
-            $(this).find(":input").val(gr[i++]);
+        $(this).find(":input").val(gr[i++]);
         // }
-    
 
-        
+
+
 
 
 
