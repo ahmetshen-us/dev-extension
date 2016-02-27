@@ -260,6 +260,8 @@ function myFunc() {
                 });
 
 
+        console.log(results);
+        console.log("==============================================");
         for(var key in keys){
 
             console.log(keys[key] + " ===> "+ results[keys[key]]);
