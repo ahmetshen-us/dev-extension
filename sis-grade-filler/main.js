@@ -101,7 +101,7 @@ function myFunc() {
     try {
         var nameUrl = eval(prompt("Class?", "p4"));
         // console.log(nameUrl);
-        unit = prompt("Please enter  unit", "unit5");
+        unit = prompt("Please enter  unit", "unit4");
         // console.log(unit);
         var searchTerm = eval(unit);
         // console.log(searchTerm);
@@ -117,37 +117,41 @@ function myFunc() {
         // console.log(unit.slice(-1) + 4);
         // column = prompt("Please enter column number", "1");
 
-        Object.size = function(obj) {
-            var size = 0,
-                key;
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) size++;
-            }
-            return size;
-        };
+        // Object.size = function(obj) {
+        //     var size = 0,
+        //         key;
+        //     for (key in obj) {
+        //         if (obj.hasOwnProperty(key)) size++;
+        //     }
+        //     return size;
+        // };
 
-        // console.log("Dogukan Aciker".split(" ")[1]);
-        // console.log("Abdulkadir Talha Yilmaz".split("")[1]);
-        var size = Object.size(nameUrl);
+        // // console.log("Dogukan Aciker".split(" ")[1]);
+        // // console.log("Abdulkadir Talha Yilmaz".split("")[1]);
+        // var size = Object.size(nameUrl);
+        // console.log(size);
+
+        var size = ((nameUrl==p4)?19:21);
 
         var grades = [];
+        var countSize =0;
 
-        var keys = Object.keys(nameUrl).sort(function(a, b) {
-
-
-            a = a.toString().split(" ");
-            a = a[a.length - 1];
-            // console.log(a);
+        // var keys = Object.keys(nameUrl).sort(function(a, b) {
 
 
+        //     a = a.toString().split(" ");
+        //     a = a[a.length - 1];
+        //     // console.log(a);
 
-            b = b.toString().split(" ");
-            b = b[b.length - 1];
-            // console.log(b);
-            if (a < b) return -1;
-            if (a > b) return 1;
-            return 0;
-        });
+
+
+        //     b = b.toString().split(" ");
+        //     b = b[b.length - 1];
+        //     // console.log(b);
+        //     if (a < b) return -1;
+        //     if (a > b) return 1;
+        //     return 0;
+        // });
         // console.log(keys);
         // TODO: Try to implement with async and in order
         // console.log("p5.length => "+p5.length);
@@ -163,10 +167,21 @@ function myFunc() {
 
 
 
-        for (var i = 0; i < keys.length; i++) {
+        // for (var i = 0; i < keys.length; i++) {
 
-            callme(nameUrl[keys[i]], keys[i])
+        //     callme(nameUrl[keys[i]], keys[i])
 
+        // }
+        // for(var key in keys){
+        //     // console.log(nameUrl[keys[key]], keys[key]);
+        //     console.log(keys[key]);
+        // }
+
+
+        for(var key in nameUrl){
+            callme(nameUrl[key], key);
+            // console.log(nameUrl[key], key);
+            // console.log(key);
         }
 
 
@@ -193,16 +208,21 @@ function myFunc() {
                         }
 
 
-                        console.log(newName + " => " + searchTerm[key]);
-                        console.log(newName + " => " + point);
+                        // console.log(newName + " => " + searchTerm[key]);
+                        // console.log(newName + " => " + point);
                         results[newName] = point;
                         // results.push({name:newName,point:point});
                         // results.push({newName,point});
 
                     }
+                    countSize++;
+                    if(countSize == size){
+
+                       ajaxCallBack(point); 
+                    }
                     // console.log(results);
-                    // TODO: Remove Comment
-                    ajaxCallBack(point);
+                    
+                    
                 }
 
             });
@@ -213,8 +233,6 @@ function myFunc() {
 
         function ajaxCallBack(p) {
 
-            grades.push(p);
-            if (grades.length == size) {
 
                 // for (var key in results) {
                 //     var value = results[key];
@@ -242,14 +260,22 @@ function myFunc() {
                 });
 
 
-                console.log(keys);
+        for(var key in keys){
+
+            // console.log(keys[key] + " ===> "+ results[keys[key]]);
+            grades.push(results[keys[key]]);
+
+        }
+
+                // console.log(keys);
+
 
                 // console.log(results);
 
                 myFunc2(grades);
-                // console.log(grades);
-                // console.log(grades.length);
-            }
+                console.log(grades);
+                console.log(grades.length);
+            
 
         }
 
@@ -286,14 +312,6 @@ function myFunc2(gr) {
         // } else{
         $(this).find(":input").val(gr[i++]);
         // }
-
-
-
-
-
-
-
-
 
     });
 
