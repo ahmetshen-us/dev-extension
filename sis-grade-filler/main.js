@@ -101,9 +101,9 @@ function myFunc() {
         var nameUrl = eval(prompt("Class?", "p4"));
         // console.log(nameUrl);
         unit = prompt("Please enter  unit", "unit5");
-        // console.log(unit);
+        console.log(unit);
         var searchTerm = eval(unit);
-        // console.log(searchTerm);
+        console.log(searchTerm);
         // console.log(unit.slice(-1)-4);
 
         // unit = unit.slice(-1);
@@ -270,7 +270,8 @@ function myFunc2(gr) {
 
 
 }
-key('⌘+r, ctrl+r', function() {
+// key('⌘+r, ctrl+r', function() {
+key('ctrl+r', function() {
 
     myFunc();
 
