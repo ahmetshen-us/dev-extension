@@ -262,7 +262,7 @@ function myFunc() {
 
         for(var key in keys){
 
-            // console.log(keys[key] + " ===> "+ results[keys[key]]);
+            console.log(keys[key] + " ===> "+ results[keys[key]]);
             grades.push(results[keys[key]]);
 
         }
@@ -273,8 +273,8 @@ function myFunc() {
                 // console.log(results);
 
                 myFunc2(grades);
-                console.log(grades);
-                console.log(grades.length);
+                // console.log(grades);
+                // console.log(grades.length);
             
 
         }
