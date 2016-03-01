@@ -305,14 +305,27 @@ function myFunc2(gr) {
 
     var i = 0;
 
-    $('#gradesTable td:nth-child(' + column + ')').each(function() {
+    $('#gradesTable td:nth-child(' + column + ')').each(function(index,value) {
         // TODO: fix this late done assignments
-        // var curValue = $(this).find(":input").val();
+
+        // console.log("index "+index+ " value "+ value);
+        // console.log("index "+index+ " value "+ $(this).find(":input").val());
+        var curValue = $(this).find(":input").val();
+        console.log("index "+index+ " is value empty "+ (curValue === 0));
+        
+        // if(curValue=='' && curValue != 0){
+        //         $(this).find(":input").val(gr[i++]);
+        // } else if(curValue == 0 && curValue !=''){
+            
+        //     $(this).find(":input").val(gr[i++]-10);
+
+        // }
+
         // console.log(curValue);
         // if (curValue == 0 &&gr[i]>0) {
         //     $(this).find(":input").val(gr[i++]-10);
         // } else{
-        $(this).find(":input").val(gr[i++]);
+      
         // }
 
     });
