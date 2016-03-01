@@ -307,6 +307,15 @@ function myFunc2(gr) {
 
     $('#gradesTable td:nth-child(' + column + ')').each(function(index,value) {
         // TODO: fix this late done assignments
+//         function isNonEmptyString(val) {
+//   return (typeof val == 'string' && val!='');
+// }
+/*
+  isNonEmptyString(0); // returns false
+  isNonEmptyString(""); // returns false
+  isNonEmptyString(null); // returns false
+  isNonEmptyString("something"); // returns true
+*/
 
         // console.log("index "+index+ " value "+ value);
         // console.log("index "+index+ " value "+ $(this).find(":input").val());
