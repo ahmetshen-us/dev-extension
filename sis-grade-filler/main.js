@@ -89,6 +89,14 @@ var unit4 = {
     unit4p1: "CSS: An Overview",
     unit4p2: "Design a Button for Your Website"
 };
+var unit5 = {
+    unit5p1: "CSS Selectors",
+    unit5p2: "Sorting Your Friends"
+};
+var unit6 = {
+    unit6p1: "CSS Positioning",
+    unit6p2: "Build a Resume"
+};
 // var results = [];
 var results = {};
 
@@ -307,6 +315,7 @@ function myFunc2(gr) {
 
     $('#gradesTable td:nth-child(' + column + ')').each(function(index,value) {
         // TODO: fix this late done assignments
+        // Also take a look at Good parts
 //         function isNonEmptyString(val) {
 //   return (typeof val == 'string' && val!='');
 // }
@@ -320,10 +329,10 @@ function myFunc2(gr) {
         // console.log("index "+index+ " value "+ value);
         // console.log("index "+index+ " value "+ $(this).find(":input").val());
         var curValue = $(this).find(":input").val();
-        console.log("index "+index+ " is value empty "+ (curValue === 0));
+        // console.log("index "+index+ " is value empty "+ (curValue === 0));
         
         // if(curValue=='' && curValue != 0){
-        //         $(this).find(":input").val(gr[i++]);
+                $(this).find(":input").val(gr[i++]);
         // } else if(curValue == 0 && curValue !=''){
             
         //     $(this).find(":input").val(gr[i++]-10);
