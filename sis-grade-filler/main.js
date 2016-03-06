@@ -201,8 +201,9 @@ function myFunc() {
 
             $.ajax({
                 url: theUrl,
-                dataType: "text",
-
+                crossDomain: true,
+                dataType: "html",
+                type:'GET',
                 async: true,
                 success: function(data) {
                     point = 0;
@@ -216,8 +217,8 @@ function myFunc() {
                         }
 
 
-                        // console.log(newName + " => " + searchTerm[key]);
-                        // console.log(newName + " => " + point);
+                        console.log(newName + " => " + searchTerm[key]);
+                        console.log(newName + " => " + point);
                         results[newName] = point;
                         // results.push({name:newName,point:point});
                         // results.push({newName,point});
