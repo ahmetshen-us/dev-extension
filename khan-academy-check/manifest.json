@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "khan-academy-check",
+  "version": "0.0.1",
+  "description": "Fill in grades lazy way",
+  "content_scripts": [
+    {
+        "matches": [
+        "http://*.khanacademy.org/*","https://*.khanacademy.org/*"],
+        "js": ["jquery-2.2.0.min.js","keymaster.min.js","main.js"],
+        "run_at": "document_end",
+        "all_frames": true
+
+    }
+  ]
+}
